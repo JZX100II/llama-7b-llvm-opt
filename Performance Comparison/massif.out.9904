@@ -1,0 +1,66 @@
+desc: (none)
+cmd: ./stock
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=194064
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=198150
+mem_heap_B=2048
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=205958
+mem_heap_B=2048
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=peak
+n1: 2048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2048 0x48E6BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 2048 0x48F5CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48F4CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 1024 0x48F5D95: _IO_default_uflow (genops.c:362)
+     n1: 1024 0x48CB0CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 1024 0x48CA141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 1024 0x1091CB: main (in /content/stock)
+   n1: 1024 0x48F4F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x48F36D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x48F36D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x48DD14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48DD14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x48C879E: printf (printf.c:33)
+         n0: 1024 0x109193: main (in /content/stock)
+#-----------
+snapshot=4
+#-----------
+time=205958
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=205992
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

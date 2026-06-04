@@ -1,0 +1,295 @@
+Iterations:        100
+Instructions:      12700
+Total Cycles:      10859
+Total uOps:        20200
+
+Dispatch Width:    4
+uOps Per Cycle:    1.86
+IPC:               1.17
+Block RThroughput: 50.5
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 3      2     1.00           *            pushq	%rbp
+ 1      1     0.25                        movq	%rsp, %rbp
+ 1      1     0.25                        subq	$16, %rsp
+ 1      1     1.00           *            movl	$0, -8(%rbp)
+ 1      1     1.00           *            movl	$0, -4(%rbp)
+ 1      1     0.25                        movabsq	$.L.str, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 2      6     0.50    *                   cmpl	$4, -4(%rbp)
+ 1      1     0.50                        je	.LBB0_9
+ 1      1     0.25                        movl	$.L.str.1, %edi
+ 1      0     0.25                        xorl	%eax, %eax
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.25                        movl	$.L.str.2, %edi
+ 1      0     0.25                        xorl	%eax, %eax
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.50                        leaq	-4(%rbp), %rsi
+ 1      1     0.25                        movl	$.L.str.3, %edi
+ 1      0     0.25                        xorl	%eax, %eax
+ 4      3     1.00                        callq	__isoc99_scanf@PLT
+ 1      5     0.50    *                   movl	-4(%rbp), %eax
+ 1      1     0.25                        addl	$-1, %eax
+ 1      1     0.25                        movl	%eax, %ecx
+ 1      1     0.25                        subl	$3, %ecx
+ 1      1     0.50                        ja	.LBB0_8
+ 1      5     0.50    *                   movq	.LJTI0_0(,%rax,8), %rax
+ 1      1     1.00                        jmpq	*%rax
+ 1      5     0.50    *                   movq	top, %rdi
+ 4      3     1.00                        callq	push
+ 1      1     0.50                        jmp	.LBB0_8
+ 1      5     0.50    *                   movq	top, %rdi
+ 4      3     1.00                        callq	pop
+ 1      1     0.50                        jmp	.LBB0_8
+ 1      5     0.50    *                   movq	top, %rdi
+ 4      3     1.00                        callq	display
+ 1      1     0.50                        jmp	.LBB0_8
+ 1      1     1.00           *            movl	$0, -8(%rbp)
+ 1      1     0.50                        jmp	.LBB0_10
+ 1      1     0.50                        jmp	.LBB0_1
+ 1      1     0.50                        jmp	.LBB0_10
+ 1      5     0.50    *                   movl	-8(%rbp), %eax
+ 1      1     0.25                        addq	$16, %rsp
+ 2      6     0.50    *                   popq	%rbp
+ 3      7     1.00                  U     retq
+ 3      2     1.00           *            pushq	%rbp
+ 1      1     0.25                        movq	%rsp, %rbp
+ 1      1     0.25                        subq	$32, %rsp
+ 1      1     1.00           *            movq	%rdi, -24(%rbp)
+ 1      1     0.25                        movl	$16, %edi
+ 4      3     1.00                        callq	malloc@PLT
+ 1      1     1.00           *            movq	%rax, -8(%rbp)
+ 1      1     0.25                        movabsq	$.L.str.4, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.25                        movabsq	$.L.str.3, %rdi
+ 1      1     0.50                        leaq	-12(%rbp), %rsi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	__isoc99_scanf@PLT
+ 1      5     0.50    *                   movl	-12(%rbp), %eax
+ 1      5     0.50    *                   movq	-8(%rbp), %rcx
+ 1      1     1.00           *            movl	%eax, (%rcx)
+ 1      5     0.50    *                   movq	top, %rax
+ 1      5     0.50    *                   movq	-8(%rbp), %rcx
+ 1      1     1.00           *            movq	%rax, 8(%rcx)
+ 1      5     0.50    *                   movq	-8(%rbp), %rax
+ 1      1     1.00           *            movq	%rax, top
+ 1      1     0.25                        movabsq	$.L.str.5, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.25                        addq	$32, %rsp
+ 2      6     0.50    *                   popq	%rbp
+ 3      7     1.00                  U     retq
+ 3      2     1.00           *            pushq	%rbp
+ 1      1     0.25                        movq	%rsp, %rbp
+ 1      1     0.25                        subq	$32, %rsp
+ 1      1     1.00           *            movq	%rdi, -24(%rbp)
+ 2      6     0.50    *                   cmpq	$0, top
+ 1      1     0.50                        jne	.LBB2_2
+ 1      1     0.25                        movabsq	$.L.str.6, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.50                        jmp	.LBB2_3
+ 1      5     0.50    *                   movq	top, %rax
+ 1      5     0.50    *                   movl	(%rax), %eax
+ 1      1     1.00           *            movl	%eax, -4(%rbp)
+ 1      5     0.50    *                   movq	top, %rax
+ 1      1     1.00           *            movq	%rax, -16(%rbp)
+ 1      5     0.50    *                   movq	top, %rax
+ 1      5     0.50    *                   movq	8(%rax), %rax
+ 1      1     1.00           *            movq	%rax, top
+ 1      5     0.50    *                   movq	-16(%rbp), %rdi
+ 4      3     1.00                        callq	free@PLT
+ 1      5     0.50    *                   movl	-4(%rbp), %esi
+ 1      1     0.25                        movabsq	$.L.str.7, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.25                        addq	$32, %rsp
+ 2      6     0.50    *                   popq	%rbp
+ 3      7     1.00                  U     retq
+ 3      2     1.00           *            pushq	%rbp
+ 1      1     0.25                        movq	%rsp, %rbp
+ 1      1     0.25                        subq	$16, %rsp
+ 1      1     1.00           *            movq	%rdi, -8(%rbp)
+ 2      6     0.50    *                   cmpq	$0, top
+ 1      1     0.50                        jne	.LBB3_2
+ 1      1     0.25                        movabsq	$.L.str.6, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 1      1     0.50                        jmp	.LBB3_6
+ 1      1     0.25                        movabsq	$.L.str.8, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 2      6     0.50    *                   cmpq	$0, -8(%rbp)
+ 1      1     0.50                        je	.LBB3_5
+ 1      5     0.50    *                   movq	-8(%rbp), %rax
+ 1      5     0.50    *                   movl	(%rax), %esi
+ 1      1     0.25                        movabsq	$.L.str.9, %rdi
+ 1      1     0.25                        movb	$0, %al
+ 4      3     1.00                        callq	printf@PLT
+ 1      5     0.50    *                   movq	-8(%rbp), %rax
+ 1      5     0.50    *                   movq	8(%rax), %rax
+ 1      1     1.00           *            movq	%rax, -8(%rbp)
+ 1      1     0.50                        jmp	.LBB3_3
+ 1      1     0.50                        jmp	.LBB3_6
+ 1      1     0.25                        addq	$16, %rsp
+ 2      6     0.50    *                   popq	%rbp
+ 3      7     1.00                  U     retq
+
+
+Resources:
+[0]   - BWDivider
+[1]   - BWFPDivider
+[2]   - BWPort0
+[3]   - BWPort1
+[4]   - BWPort2
+[5]   - BWPort3
+[6]   - BWPort4
+[7]   - BWPort5
+[8]   - BWPort6
+[9]   - BWPort7
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    
+ -      -     28.01  26.00  23.48  23.49  35.00  26.01  28.98  22.03  
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    Instructions:
+ -      -      -     0.99    -      -     1.00    -     0.01   1.00   pushq	%rbp
+ -      -      -     0.02    -      -      -     0.98    -      -     movq	%rsp, %rbp
+ -      -     0.02   0.98    -      -      -      -      -      -     subq	$16, %rsp
+ -      -      -      -     0.48   0.52   1.00    -      -      -     movl	$0, -8(%rbp)
+ -      -      -      -     0.04    -     1.00    -      -     0.96   movl	$0, -4(%rbp)
+ -      -     0.98    -      -      -      -     0.02    -      -     movabsq	$.L.str, %rdi
+ -      -     0.98    -      -      -      -      -     0.02    -     movb	$0, %al
+ -      -     0.04   0.98   0.48   0.48   1.00    -     0.98   0.04   callq	printf@PLT
+ -      -      -      -     0.48   0.52    -     0.02   0.98    -     cmpl	$4, -4(%rbp)
+ -      -     0.02    -      -      -      -      -     0.98    -     je	.LBB0_9
+ -      -      -     0.02    -      -      -     0.98    -      -     movl	$.L.str.1, %edi
+ -      -      -      -      -      -      -      -      -      -     xorl	%eax, %eax
+ -      -     0.98    -     0.04    -     1.00   1.00   0.02   0.96   callq	printf@PLT
+ -      -      -     1.00    -      -      -      -      -      -     movl	$.L.str.2, %edi
+ -      -      -      -      -      -      -      -      -      -     xorl	%eax, %eax
+ -      -     0.98    -      -     0.96   1.00   0.02   1.00   0.04   callq	printf@PLT
+ -      -      -     0.02    -      -      -     0.98    -      -     leaq	-4(%rbp), %rsi
+ -      -     0.02   0.98    -      -      -      -      -      -     movl	$.L.str.3, %edi
+ -      -      -      -      -      -      -      -      -      -     xorl	%eax, %eax
+ -      -     0.98    -     0.96   0.04   1.00   1.00   0.02    -     callq	__isoc99_scanf@PLT
+ -      -      -      -     0.52   0.48    -      -      -      -     movl	-4(%rbp), %eax
+ -      -      -     1.00    -      -      -      -      -      -     addl	$-1, %eax
+ -      -      -      -      -      -      -     1.00    -      -     movl	%eax, %ecx
+ -      -     0.96    -      -      -      -     0.02   0.02    -     subl	$3, %ecx
+ -      -     0.98    -      -      -      -      -     0.02    -     ja	.LBB0_8
+ -      -      -      -     0.52   0.48    -      -      -      -     movq	.LJTI0_0(,%rax,8), %rax
+ -      -      -      -      -      -      -      -     1.00    -     jmpq	*%rax
+ -      -      -      -     0.48   0.52    -      -      -      -     movq	top, %rdi
+ -      -     0.02   1.00    -      -     1.00    -     0.98   1.00   callq	push
+ -      -     0.98    -      -      -      -      -     0.02    -     jmp	.LBB0_8
+ -      -      -      -     0.52   0.48    -      -      -      -     movq	top, %rdi
+ -      -     0.02    -      -      -     1.00   1.00   0.98   1.00   callq	pop
+ -      -     0.98    -      -      -      -      -     0.02    -     jmp	.LBB0_8
+ -      -      -      -     0.48   0.52    -      -      -      -     movq	top, %rdi
+ -      -     0.02   1.00    -      -     1.00    -     0.98   1.00   callq	display
+ -      -     0.04    -      -      -      -      -     0.96    -     jmp	.LBB0_8
+ -      -      -      -     0.48   0.52   1.00    -      -      -     movl	$0, -8(%rbp)
+ -      -     0.02    -      -      -      -      -     0.98    -     jmp	.LBB0_10
+ -      -     0.96    -      -      -      -      -     0.04    -     jmp	.LBB0_1
+ -      -     0.04    -      -      -      -      -     0.96    -     jmp	.LBB0_10
+ -      -      -      -     0.52   0.48    -      -      -      -     movl	-8(%rbp), %eax
+ -      -      -     0.02    -      -      -     0.98    -      -     addq	$16, %rsp
+ -      -      -     0.98   0.48   0.52    -     0.02    -      -     popq	%rbp
+ -      -      -     0.02   0.52   0.48    -     0.98   1.00    -     retq
+ -      -      -     0.98    -      -     1.00   0.02    -     1.00   pushq	%rbp
+ -      -     0.01    -      -      -      -     0.98   0.01    -     movq	%rsp, %rbp
+ -      -      -     0.98    -      -      -     0.01   0.01    -     subq	$32, %rsp
+ -      -      -      -      -      -     1.00    -      -     1.00   movq	%rdi, -24(%rbp)
+ -      -     0.98   0.01    -      -      -     0.01    -      -     movl	$16, %edi
+ -      -     1.00    -      -     0.99   1.00   0.98   0.02   0.01   callq	malloc@PLT
+ -      -      -      -     0.99    -     1.00    -      -     0.01   movq	%rax, -8(%rbp)
+ -      -     0.98   0.01    -      -      -     0.01    -      -     movabsq	$.L.str.4, %rdi
+ -      -     0.01   0.01    -      -      -      -     0.98    -     movb	$0, %al
+ -      -     1.00   0.98   0.01    -     1.00    -     0.02   0.99   callq	printf@PLT
+ -      -      -     0.99    -      -      -     0.01    -      -     movabsq	$.L.str.3, %rdi
+ -      -      -     0.02    -      -      -     0.98    -      -     leaq	-12(%rbp), %rsi
+ -      -     0.02    -      -      -      -      -     0.98    -     movb	$0, %al
+ -      -     0.02    -      -      -     1.00   1.00   0.98   1.00   callq	__isoc99_scanf@PLT
+ -      -      -      -     0.48   0.52    -      -      -      -     movl	-12(%rbp), %eax
+ -      -      -      -     0.52   0.48    -      -      -      -     movq	-8(%rbp), %rcx
+ -      -      -      -     0.51   0.49   1.00    -      -      -     movl	%eax, (%rcx)
+ -      -      -      -     0.48   0.52    -      -      -      -     movq	top, %rax
+ -      -      -      -     0.52   0.48    -      -      -      -     movq	-8(%rbp), %rcx
+ -      -      -      -      -      -     1.00    -      -     1.00   movq	%rax, 8(%rcx)
+ -      -      -      -     0.48   0.52    -      -      -      -     movq	-8(%rbp), %rax
+ -      -      -      -     0.01    -     1.00    -      -     0.99   movq	%rax, top
+ -      -      -     0.99    -      -      -     0.01    -      -     movabsq	$.L.str.5, %rdi
+ -      -     0.98   0.01    -      -      -      -     0.01    -     movb	$0, %al
+ -      -     0.02    -      -      -     1.00   1.00   0.98   1.00   callq	printf@PLT
+ -      -      -     1.00    -      -      -      -      -      -     addq	$32, %rsp
+ -      -     0.98    -     0.49   0.51    -      -     0.02    -     popq	%rbp
+ -      -      -      -     0.51   0.49    -     1.00   1.00    -     retq
+ -      -     0.98    -     0.50   0.48   1.00   0.02    -     0.02   pushq	%rbp
+ -      -     0.01   0.99    -      -      -      -      -      -     movq	%rsp, %rbp
+ -      -     0.97    -      -      -      -      -     0.03    -     subq	$32, %rsp
+ -      -      -      -      -      -     1.00    -      -     1.00   movq	%rdi, -24(%rbp)
+ -      -      -     1.00   0.48   0.52    -      -      -      -     cmpq	$0, top
+ -      -     0.03    -      -      -      -      -     0.97    -     jne	.LBB2_2
+ -      -     0.01   0.01    -      -      -     0.01   0.97    -     movabsq	$.L.str.6, %rdi
+ -      -      -     0.01    -      -      -     0.97   0.02    -     movb	$0, %al
+ -      -     0.98    -      -      -     1.00   0.99   0.03   1.00   callq	printf@PLT
+ -      -     0.03    -      -      -      -      -     0.97    -     jmp	.LBB2_3
+ -      -      -      -     0.50   0.50    -      -      -      -     movq	top, %rax
+ -      -      -      -     0.50   0.50    -      -      -      -     movl	(%rax), %eax
+ -      -      -      -      -      -     1.00    -      -     1.00   movl	%eax, -4(%rbp)
+ -      -      -      -     0.50   0.50    -      -      -      -     movq	top, %rax
+ -      -      -      -     0.49   0.48   1.00    -      -     0.03   movq	%rax, -16(%rbp)
+ -      -      -      -     0.50   0.50    -      -      -      -     movq	top, %rax
+ -      -      -      -     0.50   0.50    -      -      -      -     movq	8(%rax), %rax
+ -      -      -      -      -     0.03   1.00    -      -     0.97   movq	%rax, top
+ -      -      -      -     0.50   0.50    -      -      -      -     movq	-16(%rbp), %rdi
+ -      -     0.99   0.99    -      -     1.00   0.01   0.01   1.00   callq	free@PLT
+ -      -      -      -     0.50   0.50    -      -      -      -     movl	-4(%rbp), %esi
+ -      -      -      -      -      -      -     1.00    -      -     movabsq	$.L.str.7, %rdi
+ -      -      -     1.00    -      -      -      -      -      -     movb	$0, %al
+ -      -     0.99    -      -     0.02   1.00   0.02   0.99   0.98   callq	printf@PLT
+ -      -      -     0.01    -      -      -     0.98   0.01    -     addq	$32, %rsp
+ -      -      -     1.00   0.52   0.48    -      -      -      -     popq	%rbp
+ -      -     0.99    -     0.48   0.52    -     0.01   1.00    -     retq
+ -      -     0.02   0.97   0.52   0.48   1.00    -     0.01    -     pushq	%rbp
+ -      -      -      -      -      -      -     0.98   0.02    -     movq	%rsp, %rbp
+ -      -      -     0.98    -      -      -     0.02    -      -     subq	$16, %rsp
+ -      -      -      -      -      -     1.00    -      -     1.00   movq	%rdi, -8(%rbp)
+ -      -      -     0.01   0.51   0.49    -     0.99    -      -     cmpq	$0, top
+ -      -     0.03    -      -      -      -      -     0.97    -     jne	.LBB3_2
+ -      -     0.98   0.02    -      -      -      -      -      -     movabsq	$.L.str.6, %rdi
+ -      -     0.02    -      -      -      -      -     0.98    -     movb	$0, %al
+ -      -     0.03   0.99    -     0.97   1.00    -     0.98   0.03   callq	printf@PLT
+ -      -     0.01    -      -      -      -      -     0.99    -     jmp	.LBB3_6
+ -      -     0.97    -      -      -      -     0.03    -      -     movabsq	$.L.str.8, %rdi
+ -      -      -     0.03    -      -      -     0.97    -      -     movb	$0, %al
+ -      -     1.00    -     0.03    -     1.00   1.00    -     0.97   callq	printf@PLT
+ -      -     0.97    -     0.97   0.03    -     0.01   0.02    -     cmpq	$0, -8(%rbp)
+ -      -     0.98    -      -      -      -      -     0.02    -     je	.LBB3_5
+ -      -      -      -     0.51   0.49    -      -      -      -     movq	-8(%rbp), %rax
+ -      -      -      -     0.51   0.49    -      -      -      -     movl	(%rax), %esi
+ -      -      -     0.99    -      -      -      -     0.01    -     movabsq	$.L.str.9, %rdi
+ -      -      -     0.01    -      -      -     0.99    -      -     movb	$0, %al
+ -      -     0.03   0.97   0.49   0.48   1.00   0.03   0.97   0.03   callq	printf@PLT
+ -      -      -      -     0.48   0.52    -      -      -      -     movq	-8(%rbp), %rax
+ -      -      -      -     0.49   0.51    -      -      -      -     movq	8(%rax), %rax
+ -      -      -      -      -      -     1.00    -      -     1.00   movq	%rax, -8(%rbp)
+ -      -     0.97    -      -      -      -      -     0.03    -     jmp	.LBB3_3
+ -      -      -      -      -      -      -      -     1.00    -     jmp	.LBB3_6
+ -      -      -     0.03    -      -      -     0.97    -      -     addq	$16, %rsp
+ -      -      -     1.00   0.49   0.51    -      -      -      -     popq	%rbp
+ -      -      -      -     0.51   0.49    -     1.00   1.00    -     retq
