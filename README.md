@@ -1,15 +1,15 @@
 # llama-7b-llvm-opt
 
-This project explores using **Llama 7B** from Hugging Face as a compiler to generate optimized **LLVM IR (Intermediate Representation)** code for existing programs.
+This project explores using **Facebook-Llama-Compiler 7B** from Hugging Face as a compiler to generate optimized **LLVM IR (Intermediate Representation)** code for existing programs.
 
 ## Overview
 
-The repository attempts to leverage Llama 7B's code understanding capabilities to optimize LLVM intermediate representation. The project uses code samples from **MiBench** and open-source repositories on GitHub as input, runs them through the Llama 7B compiler fine-tuned for this task (FTD model), and compares the generated optimized code against the originals.
+The repository attempts to leverage Facebook-Llama-Compiler 7B's code understanding capabilities to optimize LLVM intermediate representation. The project uses code samples from **MiBench** and open-source repositories on GitHub as input, runs them through the Facebook-Llama-Compiler 7B compiler fine-tuned for this task (FTD model), and compares the generated optimized code against the originals.
 
 ## Approach
 
 1. **Data Collection** - Gather LLVM IR from MiBench benchmarks and GitHub repositories
-2. **Model Application** - Feed the code through Llama 7B compiler FTD model for optimization suggestions
+2. **Model Application** - Feed the code through Facebook-Llama-Compiler 7B compiler FTD model for optimization suggestions
 3. **Compilation & Validation** - Attempt to compile the optimized code and verify correctness
 4. **Performance Analysis** - Benchmark optimized vs. original implementations
 5. **Result Visualization** - Analyze and visualize performance metrics
@@ -26,7 +26,7 @@ The repository attempts to leverage Llama 7B's code understanding capabilities t
 
 ## Current Findings
 
-The optimization results show mixed outcomes. While the Llama 7B model demonstrates capability in understanding LLVM IR structure, **several challenges emerged**:
+The optimization results show mixed outcomes. While the Facebook-Llama-Compiler 7B model demonstrates capability in understanding LLVM IR structure, **several challenges emerged**:
 
 - **Compilation Issues** - Many of the generated LLVM IR code samples failed to compile successfully
 - **Optimization Limitations** - The model was unable to optimize a significant portion of the test codes
@@ -36,7 +36,7 @@ These limitations suggest that while LLMs show promise in compiler optimization,
 
 ## Tools & Technologies
 
-- **Llama 7B** (Hugging Face) - Base language model
+- **Facebook-Llama-Compiler 7B** (Hugging Face) - Base language model
 - **LLVM** - Compiler infrastructure for IR generation and optimization
 - **MiBench** - Benchmark suite for code samples
 - **Python** - Analysis and data processing scripts
