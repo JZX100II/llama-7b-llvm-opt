@@ -4,15 +4,16 @@ This project explores using **Facebook-Llama-Compiler 7B** from Hugging Face as 
 
 ## Overview
 
-The repository attempts to leverage Facebook-Llama-Compiler 7B's code understanding capabilities to optimize LLVM intermediate representation. The project uses code samples from **MiBench** and open-source repositories on GitHub as input, runs them through the Facebook-Llama-Compiler 7B compiler fine-tuned for this task (FTD model), and compares the generated optimized code against the originals.
+The repository attempts to leverage Facebook-Llama-Compiler 7B's code understanding capabilities to optimize LLVM intermediate representation. The project uses code samples from **MiBench** and GitHub repositories, and experiments with iterative refinement strategies to progressively improve optimization results.
 
 ## Approach
 
 1. **Data Collection** - Gather LLVM IR from MiBench benchmarks and GitHub repositories
 2. **Model Application** - Feed the code through Facebook-Llama-Compiler 7B compiler FTD model for optimization suggestions
-3. **Compilation & Validation** - Attempt to compile the optimized code and verify correctness
-4. **Performance Analysis** - Benchmark optimized vs. original implementations
-5. **Result Visualization** - Analyze and visualize performance metrics
+3. **Iterative Refinement** - Recursively pass optimized IR back through the model for further optimization rounds until convergence
+4. **Compilation & Validation** - Attempt to compile the optimized code and verify correctness
+5. **Performance Analysis** - Benchmark optimized vs. original implementations
+6. **Result Visualization** - Analyze and visualize performance metrics
 
 ## Repository Structure
 
@@ -31,6 +32,7 @@ The optimization results show mixed outcomes. While the Facebook-Llama-Compiler 
 - **Compilation Issues** - Many of the generated LLVM IR code samples failed to compile successfully
 - **Optimization Limitations** - The model was unable to optimize a significant portion of the test codes
 - **Code Generation Quality** - Outputs required extensive validation and debugging
+- **Iterative Refinement** - Early experiments with iterative refinement showed potential but limited practical improvements
 
 These limitations suggest that while LLMs show promise in compiler optimization, additional fine-tuning and validation strategies are needed to improve reliability.
 
