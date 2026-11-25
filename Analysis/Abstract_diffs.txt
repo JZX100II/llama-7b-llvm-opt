@@ -1,0 +1,73 @@
+Comparing 1190.ll (134 IR lines) vs. 1190_opt_run1.ll (134 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 2 instruction changes (e.g., 'i32*' to 'ptr')
+- 12 metadata changes (e.g., module flags, ident)
+- 4 header changes (e.g., ModuleID, source_filename)
+- 4 other changes
+
+Comparing 1643.ll (136 IR lines) vs. 1643_opt_run1.ll (136 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 2 instruction changes (e.g., 'i32*' to 'ptr')
+- 12 metadata changes (e.g., module flags, ident)
+- 6 header changes (e.g., ModuleID, source_filename)
+- 4 other changes
+
+Comparing 1665.ll (166 IR lines) vs. 1665_opt_run1.ll (165 IR lines)
+Line reduction: 1 lines
+Summary of differences:
+- 4 instruction changes (e.g., 'i32*' to 'ptr')
+- 12 metadata changes (e.g., module flags, ident)
+- 4 header changes (e.g., ModuleID, source_filename)
+- 1 other changes
+
+Comparing 79.ll (127 IR lines) vs. 79_opt_run1.ll (127 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 2 instruction changes (e.g., 'i32*' to 'ptr')
+- 12 metadata changes (e.g., module flags, ident)
+- 4 header changes (e.g., ModuleID, source_filename)
+- 4 other changes
+
+Comparing 952.ll (123 IR lines) vs. llama 7b compiler\Recurrent\LLVM IR\Run 
+1\952_opt_run1.ll (123 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 28 instruction changes (e.g., 'i32*' to 'ptr')
+- 12 metadata changes (e.g., module flags, ident)
+- 4 header changes (e.g., ModuleID, source_filename)
+- 4 other changes
+
+Comparing abs_value.ll (32 IR lines) vs. abs_value_opt_run1.ll (32 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 4 metadata changes (e.g., module flags, ident)
+- 4 other changes
+
+Warning: bit_count_opt_run1.ll is empty or invalid. Skipping detailed comparison.
+
+Comparing min_three.ll (52 IR lines) vs. min_three_opt_run1.ll (52 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 6 metadata changes (e.g., module flags, ident)
+- 4 header changes (e.g., ModuleID, source_filename)
+
+Comparing sample1.ll (20 IR lines) vs. sample1_opt_run1.ll (20 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 4 metadata changes (e.g., module flags, ident)
+
+Comparing sample2.ll (42 IR lines) vs. sample2_opt_run1.ll (42 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 8 metadata changes (e.g., module flags, ident)
+- 6 header changes (e.g., ModuleID, source_filename)
+
+Comparing sample3.ll (30 IR lines) vs. sample3_opt_run1.ll (30 IR lines)
+Line reduction: 0 lines
+Summary of differences:
+- 4 metadata changes (e.g., module flags, ident)
+- 4 header changes (e.g., ModuleID, source_filename)
+
+Warning: sum_odd_opt_run1.ll is empty or invalid. Skipping detailed comparison.
